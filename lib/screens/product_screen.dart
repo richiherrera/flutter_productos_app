@@ -104,7 +104,8 @@ class _ProductScreenBody extends StatelessWidget {
 
           final String? imageUrl = await productService.uploadImage();
 
-          if (imageUrl != null) productForm.product.picture == imageUrl;
+          // if (imageUrl != null) productForm.product.picture == imageUrl;
+          if (imageUrl != null) productForm.product.picture = imageUrl;
 
           await productService.saveOrCreatProduct(productForm.product);
         },
